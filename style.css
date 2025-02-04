@@ -189,61 +189,75 @@ h1 {
     background: #A45A49;
 }
 
+/* Estilos Gerais */
 .guias {
-    display: flex;
-    flex-direction: column;
-
-    max-width: 1120px;
-    padding: 3rem 2rem;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    background-color: #4e510f; /* Verde militar */
+    color: #FFF2E7;
+    text-align: center;
 }
 
 .guias-cabecalho {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
 
+.guias-destaque {
+    font-size: 1.2rem;
+    color: #ffa500; /* Laranja para destaque */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .guias-titulo {
-    font-family: Montserrat;
-    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #FFF2E7;
+    margin: 0.5rem 0;
 }
 
 .guias-subtitulo {
-    color: C7BAB3;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
+    color: #C7BAB3;
+}
+
+/* Container dos Cards */
+.guia-container-bloco {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
 }
 
 .guias-card-container {
-    padding: 0rem, 10rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex: 1 1 calc(50% - 2rem); /* 2 colunas em telas maiores */
+    max-width: calc(50% - 2rem);
+    box-sizing: border-box;
 }
 
 .guias-card {
-    background: #4e510f;
-    padding: 2rem;
+    background: #5a5f1a; /* Tom mais claro de verde militar */
+    padding: 1.5rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    flex-basis: 29rem;
-    margin-top: 2rem; 
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.guias-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho do Card */
 .guias-card-cabecalho {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .guias-card-cabecalho-detalhes {
@@ -252,49 +266,68 @@ h1 {
     gap: 0.5rem;
 }
 
+.destaque.amarelo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffa500; /* Laranja para destaque */
+}
+
 .guia-titulo {
-    color: #FFF2E7;
-    font-family: Montserrat;
-    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
     font-weight: 700;
+    color: #FFF2E7;
 }
 
 .guia-avaliacao {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
     color: #756A67;
-    font-family: Inter;
-    font-size: 1rem;
-    font-weight: 500;
 }
 
+/* Descrição do Guia */
 .guia-descricao {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     color: #C7BAB3;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
+    line-height: 1.6;
 }
 
+/* Imagem e Formação */
 .guia-obs {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .guia-obs > img {
-    border-radius: 20rem;
+    border-radius: 50%;
     width: 6.5rem;
+    height: 6.5rem;
+    object-fit: cover;
 }
 
 .guia-formacao {
-    color: #C7BAB3;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    color: #C7BAB3;
 }
 
-.guia-container-bloco {
-    column-count: 2;
-    
+/* Responsividade */
+@media (max-width: 768px) {
+    .guias-card-container {
+        flex: 1 1 100%; /* 1 coluna em telas menores */
+        max-width: 100%;
+    }
+
+    .guias-titulo {
+        font-size: 2rem;
+    }
+
+    .guias-subtitulo {
+        font-size: 0.9rem;
+    }
 }
 
 <!--FOOTER ATUALIZADO-->

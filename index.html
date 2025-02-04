@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazônia Turismo</title>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <meta name="description" content="Explore toda a fauna e flora da nossa Selva Amazônica.">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <script src="script.js"></script>
+
+    
+    
+</head>
+
+<body>
+    <!-- Links do menu (Rever) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <!-- Logo e Nome -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="tucano.png" alt="Tucano" width="50">
+                    <span class="logo">Amazônia Turismo</span>
+                </a>
+
+                <!-- Botão de Toggle para Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Itens do Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Menu Suspenso 1: Destinos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Destinos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Hotéis</a></li>
+                                <li><a class="dropdown-item" href="#">O que fazer</a></li>
+                                <li><a class="dropdown-item" href="#">Restaurantes</a></li>
+                                <li><a class="dropdown-item" href="#">Voos</a></li>
+                                <li><a class="dropdown-item" href="#">Aluguéis de temporada</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Menu Suspenso 2: Viagens -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Viagens
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Histórias de viagem</a></li>
+                                <li><a class="dropdown-item" href="#">Cruzeiros</a></li>
+                                <li><a class="dropdown-item" href="#">Locação de veículos</a></li>
+                                <li><a class="dropdown-item" href="#">Excursões</a></li>
+                                <li><a class="dropdown-item" href="#">Incluir um lugar</a></li>
+                                <li><a class="dropdown-item" href="#">Fórum</a></li>
+                                <li><a class="dropdown-item" href="#">Companhias aéreas</a></li>
+                                <li><a class="dropdown-item" href="#">Planejador de viagens</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Outros Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CULINÁRIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HOSPEDAGEM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">GUIAS</a>
+                        </li>
+                    </ul>
+
+                    <!-- Campo de Busca -->
+                    <form class="d-flex search-form">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+
+                    <!-- Botão de Contato -->
+                    <a href="#" class="btn btn-primary ms-3">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    
+    <!-- Custom JS para mudança de cor no scroll -->
+    <script>
+        document.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollY = window.scrollY;
+
+            if (scrollY > 50) {
+                navbar.style.background = 'linear-gradient(90deg, #4e510f, #1B4D3E)'; /* Degradê ao rolar */
+            } else {
+                navbar.style.background = 'linear-gradient(90deg, #1B4D3E, #4e510f)'; /* Degradê inicial */
+            }
+        });
+    </script>
+</body>
+</html>
+
+    <!-- Carrossel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="margin-top: 75px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                aria-label="Slide 7"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="carrossel/1turistas_americanos.webp" class="d-block w-100" style="height: 400px; object-fit: cover;"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Família Mckenzie</h5>
+                    <p>A Amazônia nos presenteou com este encontro inesperado! <br>Nosso pequeno amigo fez questão de
+                        posar para a foto. <br>Momentos únicos que só a natureza pode proporcionar.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/2turista_russo1.webp" class="d-block w-100" style="height: 400px; object-fit: cover;"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Família Mikhailov</h5>
+                    <p>Essa foi a viagem mais emocionante que fiz com meu filho.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/3turista_japones03.webp" class="d-block w-100" style="height: 400px; object-fit: cover;"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Família Suzuki</h5>
+                    <p>Conhecer a Selva Amazônica foi muito mais do que imaginávamos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/4turista_russo2.webp" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Título da Nova Imagem</h5>
+                    <p>Descrição da nova imagem.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/turista_japones01.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Título da Nova Imagem</h5>
+                    <p>Descrição da nova imagem.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/turista_japones01.webp" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Título da Nova Imagem</h5>
+                    <p>Descrição da nova imagem.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carrossel/turista_japones02.webp" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Título da Nova Imagem</h5>
+                    <p>Descrição da nova imagem.</p>
+                </div>
+            </div>
+           
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Apresentação Principal -->
+    <main>
+        <div class="principal">
+            <section class="hero">
+                <header class="hero-conteudo">
+                    <span class="destaque marrom">Descubra a Amazônia Autêntica</span>
+                    <h1>Aventuras Inesquecíveis na Maior Floresta do Mundo</h1>
+                    <hr>
+                    <h2 class="hero-subtitulo">Da culinária ancestral aos rituais indígenas, das águas místicas à
+                        biodiversidade única - viva experiências que transformarão sua visão de mundo.</h2>
+                </header>
+                <div class="hero-imagens-container">
+                    <figure><img src="assets/14teatro.jpg"></figure>
+                    <figure><img src="assets/5crianca_c_macaco.jpg"></figure>
+                    <figure><img src="assets/1acai.jpg"></figure>
+                    <figure><img src="assets/2agua_verde.jpg"></figure>
+                    <figure><img src="assets/3arara.jpg"></figure>
+                    <figure><img src="assets/4arara_fauna.jpg"></figure>
+                    <figure><img src="assets/6encontro_das_aguas.jpg"></figure>
+                    <figure><img src="assets/7india_maquiada.jpg"></figure>
+                    <figure><img src="assets/9macaco.jpg"></figure>
+                    <figure><img src="assets/10onca.jpg"></figure>
+                    <figure><img src="assets/11palacio_do_rio_negro.jpg"></figure>
+                    <figure><img src="assets/12tambaqui.jpg"></figure>
+                    <figure><img src="indio_selva.jpg"></figure>
+                    <figure><img src="assets/15teatro_amazônico.jpg"></figure>
+                    <figure><img src="assets/16vitoria_regia.jpg"></figure>
+                    <figure><img src="encontro das águas.jpg"></figure>
+                    <figure><img src="comida_amazonia.webp"></figure>
+                    <figure><img src="selva_amazônica.jpg"></figure>
+                    <figure><img src="arara001.webp"></figure>
+                    <figure><img src="arara002.webp"></figure>
+                    <figure><img src="india001.jpeg"></figure>
+                    <figure><img src="para_carrossel.jpeg"></figure>
+                    <figure><img src="tucano.jpg"></figure>
+                    <figure><img src="macaco.webp"></figure>
+                </div>
+            </section>
+        </div>
+
+        <!-- Botão (Talvez apagar) -->
+        <section class="botao-container">
+            <button type="button"><img src="assets/chevron-down.svg"></button>
+        </section>
+
+        <!-- Seção Culinária Amazônica -->
+    <section class="culinaria-amazonica py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Coluna do Texto -->
+                <div class="col-md-6">
+                    <h2 class="display-4 mb-4">Culinária Amazônica</h2>
+                    <p class="lead">
+                        Diz a lenda que quem come tambaqui não sai daqui, e não é por acaso! Esse peixe amazônico é um verdadeiro tesouro, com uma carne suculenta e um sabor inconfundível que conquistam todos que o provam. Rico em proteínas, ômega-3 e outros nutrientes, o tambaqui é uma fonte de saúde e energia para quem o saboreia. Preparado de diversas maneiras – assado, grelhado ou em moquecas – sempre acompanhado de farinha de mandioca, ele é um prato que traz à mesa o autêntico sabor da Amazônia. Quem se entrega a essa delícia acaba se apaixonando pela sua riqueza e pelo sabor único que ele transmite. Não é à toa que a lenda diz que, depois de saborear o tambaqui, a pessoa não quer mais sair daqui!
+                    </p>
+                </div>
+
+                <!-- Coluna do Carrossel -->
+                <div class="col-md-6">
+                    <div id="carouselAmazonia" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="jaraqui-culinaria.webp" class="d-block w-100" alt="Tacacá">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="jaraqui-culinaria001.webp" class="d-block w-100" alt="Pato no Tucupi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="jaraqui-culinaria002.webp" class="d-block w-100" alt="Maniçoba">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="culinaria-tabaqui-assado.jpg" class="d-block w-100" alt="Tambaqui Assado">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+
+    <!-- Seção Hotéis de Selva -->
+    <section class="culinaria-amazonica py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Coluna do Carrossel -->
+                <div class="col-md-6">
+                    <div id="carouselAmazonia" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="MELHORES-hoteis-de-selva001.jpg" class="d-block w-100" alt="Tacacá">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="MELHORES-hoteis-de-selva002.jpg" class="d-block w-100" alt="Pato no Tucupi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="MELHORES-hoteis-de-selva003.jpg" class="d-block w-100" alt="Maniçoba">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="MELHORES-hoteis-de-selva004.jpg" class="d-block w-100" alt="Tambaqui Assado">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coluna do Texto -->
+                <div class="col-md-6">
+                    <h2 class="display-4 mb-4">Hotéis de Selva</h2>
+                    <p class="lead">
+                        Os hotéis de selva na Amazônia oferecem uma experiência única, imersos no coração da floresta. Com estruturas de luxo e sustentabilidade, esses hotéis combinam conforto e contato direto com a natureza. Rodeados por vegetação exuberante, muitos possuem vistas panorâmicas deslumbrantes para a selva, permitindo aos hóspedes se desconectarem do mundo exterior. A segurança é uma prioridade, com guias experientes e infraestrutura adequada para garantir uma estadia tranquila e sem preocupações. As equipes são preparadas para atender em diversos idiomas, garantindo que visitantes de qualquer parte do mundo se sintam acolhidos. Além disso, os serviços variam de passeios exclusivos pela floresta até atividades culturais que mergulham nas tradições locais. A experiência é personalizada, com cada detalhe pensado para integrar o luxo ao meio ambiente. Os hotéis de selva proporcionam uma oportunidade única de explorar a biodiversidade amazônica sem abrir mão do conforto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Guias (Organizar) -->
+        <section class="guias">
+            <header class="guias-cabecalho">
+                <span class="guias-destaque">Guias Turísticos</span>
+                <h2 class="guias-titulo">Conheça nossa equipe de trabalho</h2>
+                <p class="guias-subtitulo">Aqui estão os responsáveis em lhe apresentar a selva Amazônica</p>
+            </header>
+            <div class="guia-container-bloco">
+                <div class="guias-card-container">
+                    <div class="guias-card">
+                        <header class="guias-card-cabecalho">
+                            <div class="guias-card-cabecalho-detalhes">
+                                <span class="destaque amarelo"> Ângela Neves </span>
+                                <h2 class="guia-titulo">Fluente em inglês, espanhol e francês.</h2>
+                            </div>
+                            <p class="guia-avaliacao">Extraordinário 4/4</p>
+                        </header>
+                        <p class="guia-descricao">Sou manauara e conheço minha cidade como ninguém, uso todo meu
+                            conhecimento para apresentar as belezas do nosso Amazonas aos nossos clientes.</p>
+                        <div class="guia-obs">
+                            <img src="guia_Mulher.jpg">
+                            <span class="guia-formacao">
+                                Formado em Hotelaria e Turismo pela UEA.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guias-card-container">
+                    <div class="guias-card">
+                        <header class="guias-card-cabecalho">
+                            <div class="guias-card-cabecalho-detalhes">
+                                <span class="destaque amarelo"> Leonardo Silva </span>
+                                <h2 class="guia-titulo">Fluente em inglês, espanhol e francês.</h2>
+                            </div>
+                            <p class="guia-avaliacao">Extraordinário 4/4</p>
+                        </header>
+                        <p class="guia-descricao">Sou manauara e conheço minha cidade como ninguém, uso todo meu
+                            conhecimento para apresentar as belezas do nosso Amazonas aos nossos clientes.</p>
+                        <div class="guia-obs">
+                            <img src="assets/leonardo_Silva.jpg">
+                            <span class="guia-formacao">
+                                Formado em Hotelaria e Turismo pela UEA.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guias-card-container">
+                    <div class="guias-card">
+                        <header class="guias-card-cabecalho">
+                            <div class="guias-card-cabecalho-detalhes">
+                                <span class="destaque amarelo"> Leonardo Silva </span>
+                                <h2 class="guia-titulo">Fluente em inglês, espanhol e francês.</h2>
+                            </div>
+                            <p class="guia-avaliacao">Extraordinário 4/4</p>
+                        </header>
+                        <p class="guia-descricao">Sou manauara e conheço minha cidade como ninguém, uso todo meu
+                            conhecimento para apresentar as belezas do nosso Amazonas aos nossos clientes.</p>
+                        <div class="guia-obs">
+                            <img src="Guia002.jpg">
+                            <span class="guia-formacao">
+                                Formado em Hotelaria e Turismo pela UEA.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guias-card-container">
+                    <div class="guias-card">
+                        <header class="guias-card-cabecalho">
+                            <div class="guias-card-cabecalho-detalhes">
+                                <span class="destaque amarelo"> Leonardo Silva </span>
+                                <h2 class="guia-titulo">Fluente em inglês, espanhol e francês.</h2>
+                            </div>
+                            <p class="guia-avaliacao">Extraordinário 4/4</p>
+                        </header>
+                        <p class="guia-descricao">Sou manauara e conheço minha cidade como ninguém, uso todo meu
+                            conhecimento para apresentar as belezas do nosso Amazonas aos nossos clientes.</p>
+                        <div class="guia-obs">
+                            <img src="guia_Mulher004.jpg">
+                            <span class="guia-formacao">
+                                Formado em Hotelaria e Turismo pela UEA.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--2°Avaliações de clientes carrosel -->
+        <div class="center-container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="card testimonial-card shadow-lg" style="max-width: 800px;">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <!-- Depoimento 1 -->
+                        <div class="carousel-item active">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/homem001.png" class="rounded-circle mb-4" alt="Depoente 1" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    Foi incrível explorar a Selva Amazônica com essa equipe maravilhosa.
+                                </p>
+                                <h5 class="text-dark fw-bold">Rodolfo Viena</h5>
+                                <small class="text-muted">Diretor de Marketing</small>
+                            </div>
+                        </div>
+        
+                        <!-- Depoimento 2 -->
+                        <div class="carousel-item">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/homem002.jpg" class="rounded-circle mb-4" alt="Depoente 2" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    "Experiência perfeita. Fiquei hospedado em um hotel ⭐⭐⭐⭐⭐. Com os melhores em tudo o que fazem."
+                                </p>
+                                <h5 class="text-dark fw-bold">Carlos Mendes</h5>
+                                <small class="text-muted">Diretor de Marketing</small>
+                            </div>
+                        </div>
+        
+                        <!-- Depoimento 3 -->
+                        <div class="carousel-item">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/homem003.jpg" class="rounded-circle mb-4" alt="Depoente 3" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    "✈️Agência de viagem de confiança, atendimento nota 10, simpáticos. Super recomendo."
+                                </p>
+                                <h5 class="text-dark fw-bold">Viktor Petrov</h5>
+                                <small class="text-muted">CEO</small>
+                            </div>
+                        </div>
+        
+                        <!-- Depoimento 4 -->
+                        <div class="carousel-item">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/mulher002.jpg" class="rounded-circle mb-4" alt="Depoente 4" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    "Uma agência de confiança. Super recomendo."
+                                </p>
+                                <h5 class="text-dark fw-bold">Carlos Mendes</h5>
+                                <small class="text-muted">Diretor de Marketing</small>
+                            </div>
+                        </div>
+        
+                        <!-- Depoimento 5 -->
+                        <div class="carousel-item">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/mulher003.jpg" class="rounded-circle mb-4" alt="Depoente 5" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    "Excelência em atendimento. ❤️✈️"
+                                </p>
+                                <h5 class="text-dark fw-bold">Carlos Mendes</h5>
+                                <small class="text-muted">Diretor de Marketing</small>
+                            </div>
+                        </div>
+        
+                        <!-- Depoimento 6 -->
+                        <div class="carousel-item">
+                            <div class="card-body text-center p-5">
+                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width: 100px; margin-bottom: 20px;">
+                                <div class="star-rating mb-3">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <img src="testemunhos/Sara-Johnson-Top-Model.jpg" class="rounded-circle mb-4" alt="Depoente 6" style="width: 100px; height: 100px; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <p class="fst-italic text-muted mb-4">
+                                    "Minha experiência na selva amazônica foi simplesmente inesquecível! A agência cuidou de todos os detalhes, desde o transporte até os passeios exclusivos pela floresta. Os hotéis de selva, além de serem luxuosos, tinham uma vista deslumbrante e estavam totalmente integrados à natureza. Senti-me segura e completamente imersa em um ambiente único. Foi como estar em outro mundo – ao mesmo tempo selvagem e luxuoso. Eu jamais imaginaria que poderia viver algo tão intenso e ao mesmo tempo relaxante. Com certeza, voltarei!"
+                                </p>
+                                <h5 class="text-dark fw-bold">Sarh Johnson</h5>
+                                <small class="text-muted">Top Model</small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Botões de navegação -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--2°Avaliações de clientes carrosel - ATÉ AQUI -->
+
+
+        <!--Avaliações de clientes carrosel-->
+      <!--  <section class="depoimentos mySwiper">
+            <div class="depoimentos-container swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <i class="bi bi-quote"></i>
+
+                    <p class="texto-depoimento">
+                        Foi incrível explorar a Selva Amazônica com essa equipe maravilhosa.
+                    </p>
+                    <div class="cliente">
+                        <img src="testemunhos/homem001.png" alt="" width="100">
+                        <div class="info-cliente">
+                            <p class="nome-cliente"> Rodolfo Viena</p>
+                            <p class="func-cliente">Diretor de Marketing</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="slide swiper-slide">
+
+                    <p class="texto-depoimento">
+                        Experiencia perfeita. Fiquei hospedado em um hotel ⭐⭐⭐⭐⭐. Com os melhores em tudo o que fazem.
+                    </p>
+                    <div class="cliente">
+                        <img src="testemunhos/homem001.png" alt="" width="100">
+                        <div class="info-cliente">
+                            <p class="nome-cliente"> Rodolfo Viena</p>
+                            <p class="func-cliente">Diretor de Marketing</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="slide swiper-slide">
+
+                    <p class="texto-depoimento">
+                        ✈️Agência de viagem de confiança, atendimento nota 10, simpáticos. Super recomendo.
+                    </p>
+                    <div class="cliente">
+                        <img src="testemunhos/homem001.png" alt="" width="100">
+                        <div class="info-cliente">
+                            <p class="nome-cliente"> Rodolfo Viena</p>
+                            <p class="func-cliente">Diretor de Marketing</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="slide swiper-slide">
+
+                    <p class="texto-depoimento">
+                        Uma agência de confiança. Super recomendo.”
+                    </p>
+                    <div class="cliente">
+                        <img src="testemunhos/homem001.png" alt="" width="100">
+                        <div class="info-cliente">
+                            <p class="nome-cliente"> Rodolfo Viena</p>
+                            <p class="func-cliente">Diretor de Marketing</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="slide swiper-slide">
+
+                    <p class="texto-depoimento">
+                        Excelência em atendimento. ❤️✈️
+                    </p>
+                    <div class="cliente">
+                        <img src="testemunhos/homem001.png" alt="" width="100">
+                        <div class="info-cliente">
+                            <p class="nome-cliente"> Rodolfo Viena</p>
+                            <p class="func-cliente">Diretor de Marketing</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+
+        </div>
+    </main> -->
+    <!--1° tentativa de carrossel para testemunho - ATÉ AQUI - -->
+
+
+    <!-- Roda Pé (Rever) -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h2>Amazônia Turismo</h2>
+                <p>It's all about your dreams.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <a href="#" class="footer-link" id="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+
+                            <a href="#" class="footer-link" id="whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sala de imprensa</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Seja um franqueado</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Products</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Trabalhe conosco</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Nossa históriac</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Central de ajuda</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Subscribe</h3>
+
+                <p>
+                    Envie-nos um e-mail para ser notificado sobre nossos pacotes promocionais.
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Manaus
+Hotéis
+O que fazer
+Restaurantes
+Voos
+Aluguéis de temporada
+Histórias de viagem
+Cruzeiros
+Locação de veículos
+Excursões
+Incluir um lugar
+Fórum
+Companhias aéreas
+Planejador de viagens-->
+
+
+        <div id="footer_copywrite">
+            &#169 Copyright 2025 - Todos os direitos reservados | Desenvolvido por: ❤️ Ana Karoline Ribeiro ❤️ <br>
+        
+        </div>
+        
+
+    </footer>
+
+    <!-- jQuery (se necessário) -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+<!-- Popper.js -->
+<script src="assets/js/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+<!-- Swiper JS -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

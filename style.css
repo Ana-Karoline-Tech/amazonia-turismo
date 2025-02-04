@@ -291,6 +291,12 @@ h1 {
     font-size: 1rem;
     font-weight: 600;
 }
+
+.guia-container-bloco {
+    column-count: 2;
+    
+}
+
 <!--FOOTER ATUALIZADO-->
 
 :root{
@@ -438,10 +444,6 @@ footer {
     font-weight: 500;
 }
 
-.guia-container-bloco {
-    column-count: 2;
-    
-}
 
 .depoimentos {
     width: 100%;

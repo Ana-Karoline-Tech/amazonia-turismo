@@ -239,15 +239,6 @@ hr {
     }
 }
 
--->
-
-.botao-container {
-    width: 100%;
-    max-width: 1120px;
-    margin: auto;
-    transform: translate("0, -50%");
-}
-
 .button {
     border: none;
     padding: 1rem;

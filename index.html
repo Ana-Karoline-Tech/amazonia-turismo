@@ -99,7 +99,7 @@
                     </form>
 
                     <!-- Botão de Contato -->
-                    <a href="#CONTATO" class="btn btn-primary ms-3">Contato</a>
+                    <a href="#CONTATO" class="btn btn-contato btn-primary ms-3 ">Contato</a>
                 </div>
             </div>
         </nav>
@@ -214,6 +214,19 @@
 
     <main>
         <div class="principal">
+            <!-- <div id="google_translate_element"></div>
+
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement(
+                        { pageLanguage: 'pt', includedLanguages: 'en,es,fr,de,it,pt,ja,ko,zh-CN,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                        },
+                        'google_translate_element'
+                    );
+                }
+            </script> -->
+        
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <section class="hero">
                 <!-- Conteúdo de Texto -->
                 <header class="hero-conteudo">
@@ -270,7 +283,7 @@
 
                 <!-- Coluna do Carrossel -->
                 <div class="col-md-6">
-                    <div id="carouselAmazonia" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselCulinaria" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="assets/jaraqui-culinaria.webp" class="d-block w-100" alt="Tacacá">
@@ -285,11 +298,11 @@
                                 <img src="assets/culinaria-tabaqui-assado.jpg" class="d-block w-100" alt="Tambaqui Assado">
                             </div> -->
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCulinaria" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCulinaria" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Próximo</span>
                         </button>
@@ -308,7 +321,7 @@
             <div class="row align-items-center">
                 <!-- Coluna do Carrossel -->
                 <div class="col-md-6">
-                    <div id="carouselAmazonia" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselHoteisSelva" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="assets/MELHORES-hoteis-de-selva001.jpg" class="d-block w-100" alt="Tacacá">
@@ -323,11 +336,11 @@
                                 <img src="assets/MELHORES-hoteis-de-selva004.jpg" class="d-block w-100" alt="Tambaqui Assado">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHoteisSelva" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazonia" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHoteisSelva" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Próximo</span>
                         </button>
@@ -675,7 +688,7 @@
                   <textarea id="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Como podemos ajudar?" required></textarea>
                 </div>
       
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <button type="submit" class="btn btn-enviar btn-primary">Enviar Mensagem</button>
               </form>
             </div>
           </div>
@@ -753,7 +766,7 @@
         </div>
     </footer>
 
-    <!-- jQuery (Confirmar se é necessário) -->
+<!-- jQuery (Confirmar se é necessário) -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 
 <!-- Popper.js -->

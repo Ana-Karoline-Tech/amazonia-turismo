@@ -16,15 +16,8 @@
     letter-spacing: 1px;
   }
 
-  @media (max-width: 768px) {
-    .flex {
-        flex-direction: column; /* Organiza os itens em uma coluna em telas pequenas */
-        align-items: center; /* Centraliza os itens */
-    }
-  }
 
-
-  .container {
+.container {
     max-width: 1280px;
     margin: auto;
 }
@@ -114,7 +107,39 @@ nav {
     flex-direction: column;
 }
 
-<!--
+/* Botão Contato */
+
+.btn-contato {
+    background: linear-gradient(90deg, #28a745, #1b4d3e);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 24px;
+    transition: background 0.3s;
+}
+.btn-contato:hover {
+    background: linear-gradient(90deg, #1b4d3e, #28a745);
+    color: #fff;
+}
+
+/* Botão Enviar Mensagem */
+.btn-enviar {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 24px;
+    transition: background 0.3s;
+    margin-top: 12px;
+}
+.btn-enviar:hover {
+    background:  #2ecc40 ;
+    color: #fff;
+}
+
+/* ESTILOS BTN ATÉ AQUI */
 
 /* Estilos Gerais */
 .principal {
@@ -203,44 +228,50 @@ hr {
     transform: scale(1.1);
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem 1rem;
-    }
-
-    .hero-conteudo {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitulo {
-        font-size: 1.25rem;
-    }
-
-    .hero-imagens-container {
-        max-width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-    }
+/*Carrossel Cachoeiras - Trilhas e Destinos*/
+/* .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    .hero-imagens-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-@media (max-width: 480px) {
-    .hero-imagens-container {
-        grid-template-columns: 1fr;
-    }
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
 }
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+} */
+
+
 
 .button {
     border: none;
@@ -375,21 +406,7 @@ hr {
     color: #C7BAB3;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .guias-card-container {
-        flex: 1 1 100%; /* adaptado 1 coluna em telas menores */
-        max-width: 100%;
-    }
 
-    .guias-titulo {
-        font-size: 2rem;
-    }
-
-    .guias-subtitulo {
-        font-size: 0.9rem;
-    }
-}
 
 <!--FOOTER ATUALIZADO-->
 
@@ -522,31 +539,7 @@ footer {
     font-weight: 100;
 }
 
-@media screen and (max-width: 768px) {
-    #footer_content {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
-        padding: 2rem 1.5rem;
-    }
 
-    #footer_social_media {
-        gap: 1rem;
-    }
-
-    #footer_subscribe {
-        grid-column: span 2;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #footer_content {
-        grid-template-columns: 1fr;
-    }
-
-    #footer_subscribe {
-        grid-column: span 1;
-    }
-}
 
 
 <!--FOOTER ATUALIZADO ATÉ AQUI-->
@@ -619,8 +612,87 @@ footer {
     font-size: 14px;
 }
 
-@media screen and (max-width:768px){
+/* Responsividade */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitulo {
+        font-size: 1.25rem;
+    }
+
+    .hero-imagens-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-imagens-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .guias {
+        padding: 2rem 1rem;
+    }
+    .guias-card-container {
+        flex: 1 1 100%; /* adaptado 1 coluna em telas menores */
+        max-width: 100%;
+    }
+
+    .guias-titulo {
+        font-size: 2rem;
+    }
+
+    .guias-subtitulo {
+        font-size: 0.9rem;
+    }
+
     .nav-btn{
         display: none;
+    }
+
+    .flex {
+        flex-direction: column; /* Organiza os itens em uma coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #footer_content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    #footer_social_media {
+        gap: 1rem;
+    }
+
+    #footer_subscribe {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-imagens-container {
+        grid-template-columns: 1fr;
+    }
+
+    #footer_content {
+        grid-template-columns: 1fr;
+    }
+
+    #footer_subscribe {
+        grid-column: span 1;
     }
 }
